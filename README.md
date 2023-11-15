@@ -55,3 +55,5 @@ Math.randon()
 1. 有一个随机函数，返回1~5的随机值，只能借助这个随机逻辑，得到1~7的随机值
 
 ![image-20231114102408893](https://gitee.com/sheldon_kkk/typora-image/raw/master/img/202311141024038.png)
+
+2. 01不等概率 =》 01等概率
