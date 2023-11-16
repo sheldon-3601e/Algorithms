@@ -165,6 +165,9 @@ public class code01 {
         return ans;
     }
 
+    /**
+     * 找到小于num最右的位置
+     */
     public static int mostRightNoGreaterNumIndex(int[] arr, int num) {
         if (arr == null || arr.length == 0) {
             return -1;
