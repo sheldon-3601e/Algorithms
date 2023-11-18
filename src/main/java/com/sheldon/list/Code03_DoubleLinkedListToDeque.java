@@ -3,7 +3,7 @@ package com.sheldon.list;
 import java.util.Deque;
 import java.util.LinkedList;
 
-public class DoubleLinkedListToDeque {
+public class Code03_DoubleLinkedListToDeque {
 
 	public static class Node<V> {
 		public V value;

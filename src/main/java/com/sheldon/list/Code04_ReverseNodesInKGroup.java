@@ -1,12 +1,35 @@
 package com.sheldon.list;
 
 // 测试链接：https://leetcode.com/problems/reverse-nodes-in-k-group/
-public class ReverseNodesInKGroup {
+public class Code04_ReverseNodesInKGroup {
+
+	public static void main(String[] args) {
+		ListNode start = new ListNode(1);
+		ListNode l1 = new ListNode(1);
+		l1.next = new ListNode(2);
+		l1.next.next = new ListNode(3);
+		start.next = l1;
+
+		printListNode(start);
+
+//		ListNode end = getKGroupEnd(start, 4);
+//		reverse(start, end);
+//
+//		printListNode(end);
+
+		ListNode head = reverseKGroup(start, 3);
+
+		printListNode(head);
+	}
 
 	// 不要提交这个类
 	public static class ListNode {
 		public int val;
 		public ListNode next;
+
+		public ListNode(int val) {
+			this.val = val;
+		}
 	}
 
 	public static ListNode reverseKGroup(ListNode head, int k) {
@@ -53,5 +76,14 @@ public class ReverseNodesInKGroup {
 		}
 		start.next = end;
 	}
+
+	public static void printListNode(ListNode listNode){
+		do {
+			System.out.print(listNode.val);
+			listNode = listNode.next;
+		} while (listNode.next != null);
+		System.out.println();
+	}
+
 
 }

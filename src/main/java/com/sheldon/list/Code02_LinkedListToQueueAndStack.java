@@ -11,7 +11,7 @@ import java.util.Stack;
  * @Version 1.0
  * @Description 单链表实现队列和栈
  */
-public class LinkedListToQueueAndStack {
+public class Code02_LinkedListToQueueAndStack {
 
     /**
      * 单链表
@@ -32,8 +32,8 @@ public class LinkedListToQueueAndStack {
      * @param <V>
      */
     public static class MyQueue<V> {
-        private LinkedListToQueueAndStack.Node<V> head;
-        private LinkedListToQueueAndStack.Node<V> tail;
+        private Code02_LinkedListToQueueAndStack.Node<V> head;
+        private Code02_LinkedListToQueueAndStack.Node<V> tail;
         private int size;
 
         public MyQueue() {
@@ -51,7 +51,7 @@ public class LinkedListToQueueAndStack {
         }
 
         public void offer(V value) {
-            LinkedListToQueueAndStack.Node<V> cur = new LinkedListToQueueAndStack.Node<V>(value);
+            Code02_LinkedListToQueueAndStack.Node<V> cur = new Code02_LinkedListToQueueAndStack.Node<V>(value);
             if (tail == null) {
                 head = cur;
                 tail = cur;

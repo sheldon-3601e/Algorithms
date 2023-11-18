@@ -1,8 +1,5 @@
 package com.sheldon.list;
 
-import com.sheldon.hash.HashMapTreeMap;
-import jdk.nashorn.internal.ir.SplitReturn;
-
 /**
  * @ClassName ReverseLinkedList
  * @Author 26483
@@ -10,7 +7,7 @@ import jdk.nashorn.internal.ir.SplitReturn;
  * @Version 1.0
  * @Description
  */
-public class ReverseLinkedList {
+public class Code01_ReverseLinkedList {
 
     public static class Node{
         Integer value;
