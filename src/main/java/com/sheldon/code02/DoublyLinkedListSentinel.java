@@ -118,8 +118,9 @@ public class DoublyLinkedListSentinel implements Iterable<Integer> {
 
             @Override
             public Integer next() {
+                int value = p.value;
                 p = p.next;
-                return p.value;
+                return value;
             }
         };
     }
