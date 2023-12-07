@@ -38,7 +38,7 @@
       min-height: 200px;
     }
   </style>
-  <title>¶ş·Ö²éÕÒ - »ù´¡°æ</title>
+  <title>äºŒåˆ†æŸ¥æ‰¾ - åŸºç¡€ç‰ˆ</title>
 </head>
 
 <body>
@@ -48,9 +48,9 @@
     int i = 0, j = a.length - 1;
     while (i <= j) {
         int m = (i + j) >>> 1;
-        if (target < a[m]) {          // ÔÚ×ó±ß
+        if (target < a[m]) {          // åœ¨å·¦è¾¹
             j = m - 1;
-        } else if (a[m] < target) {   // ÔÚÓÒ±ß
+        } else if (a[m] < target) {   // åœ¨å³è¾¹
             i = m + 1;
         } else {
             return m;
@@ -61,21 +61,21 @@
   </div>
   <main></main>
   <section>
-    <div style='background-color:#cc99cd; margin: 2px 2px 0 0; padding: 4px 6px;'>Ë÷Òı</div>
-    <div style='background-color:#f08d49; margin: 2px 2px 0 0; padding: 4px 6px;'>ÕÒµ½</div>
+    <div style='background-color:#cc99cd; margin: 2px 2px 0 0; padding: 4px 6px;'>ç´¢å¼•</div>
+    <div style='background-color:#f08d49; margin: 2px 2px 0 0; padding: 4px 6px;'>æ‰¾åˆ°</div>
   </section>
   <div style='margin: 2px 2px 0 0; padding: 4px 6px;'>
-    <span>ÔªËØ¸öÊı&nbsp;</span><input type="text" id='count' class="saveable" value="8">
-    <span>´ı²éÕÒÖµ&nbsp;</span><input type="text" id='key' class="saveable">
-    <input style='font-size:12px;' type="button" value="²éÕÒ" onclick="onSearch()">
-    <span id="searchCount">ËùÓÃ´ÎÊı:?</span>
+    <span>å…ƒç´ ä¸ªæ•°&nbsp;</span><input type="text" id='count' class="saveable" value="8">
+    <span>å¾…æŸ¥æ‰¾å€¼&nbsp;</span><input type="text" id='key' class="saveable">
+    <input style='font-size:12px;' type="button" value="æŸ¥æ‰¾" onclick="onSearch()">
+    <span id="searchCount">æ‰€ç”¨æ¬¡æ•°:?</span>
   </div>
   <div style='margin: 2px 2px 0 0; padding: 4px 6px;'>
-    <span>¶¯»­ËÙ¶È(ms)&nbsp;</span><input type="number" step="100" value="300" id="animate_speed" class="saveable int"
+    <span>åŠ¨ç”»é€Ÿåº¦(ms)&nbsp;</span><input type="number" step="100" value="300" id="animate_speed" class="saveable int"
       style="width: 40px;">
-    <span>¾ØĞÎ¿í</span><input type="number" step="1" value="30" id="RECT_WIDTH" class="saveable int" style="width: 40px;">
-    <span>¾ØĞÎ¸ß</span><input type="number" step="1" value="20" id="RECT_HEIGHT" class="saveable int" style="width: 40px;">
-    <input style='font-size:12px;' type="button" value="±£´æ" onclick="onSave('search_binary1')">
+    <span>çŸ©å½¢å®½</span><input type="number" step="1" value="30" id="RECT_WIDTH" class="saveable int" style="width: 40px;">
+    <span>çŸ©å½¢é«˜</span><input type="number" step="1" value="20" id="RECT_HEIGHT" class="saveable int" style="width: 40px;">
+    <input style='font-size:12px;' type="button" value="ä¿å­˜" onclick="onSave('search_binary1')">
   </div>
   <script src="js/p5.js"></script>
   <script src="js/p5-svg.js"></script>
@@ -110,10 +110,10 @@
       d.draw(() => background('#eee'))
     }
     /*
-      array: Êı×é
-      pointers: Ö¸Õë
-      highlights: ¸ßÁÁÎ»ÖÃ
-      lineNumber: ¸ßÁÁĞĞºÅ
+      array: æ•°ç»„
+      pointers: æŒ‡é’ˆ
+      highlights: é«˜äº®ä½ç½®
+      lineNumber: é«˜äº®è¡Œå·
     */
     function frame({ array, pointers, highlights, lineNumber }) {
       const pre = document.querySelector('pre')
@@ -123,7 +123,7 @@
       }
       const LEFT = (width - array.length * RECT_WIDTH) / 2
       for (let i = 0; i < array.length; i++) {
-        // ×¢£º¾ØĞÎÒÔ×óÏÂ½Ç x, y ×÷ÎªÆğµã×ø±ê
+        // æ³¨ï¼šçŸ©å½¢ä»¥å·¦ä¸‹è§’ x, y ä½œä¸ºèµ·ç‚¹åæ ‡
         let x = LEFT + i * RECT_WIDTH
         let y = height - RECT_HEIGHT
         stroke(0)
@@ -178,7 +178,7 @@
         const m = (i + j) >>> 1
         d.add({ array: dataArray, pointers: [{ text: 'i', index: i }, { text: 'j', index: j }, { text: 'm', index: m }], lineNumber: 5 }, frame)
         count++
-        document.querySelector('#searchCount').innerHTML = 'ËùÓÃ´ÎÊı:' + count
+        document.querySelector('#searchCount').innerHTML = 'æ‰€ç”¨æ¬¡æ•°:' + count
         if (target < a[m]) {
           d.add({ array: dataArray, pointers: [{ text: 'i', index: i }, { text: 'j', index: j }, { text: 'm', index: m }], lineNumber: 6 }, frame)
           j = m - 1
